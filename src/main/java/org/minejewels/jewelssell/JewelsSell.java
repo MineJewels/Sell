@@ -10,6 +10,7 @@ import net.abyssdev.abysslib.text.MessageCache;
 import org.minejewels.jewelssell.commands.sell.SellCommand;
 import org.minejewels.jewelssell.commands.sellwand.SellwandCommand;
 import org.minejewels.jewelssell.item.registry.ItemRegistry;
+import org.minejewels.jewelssell.listeners.InteractListener;
 
 @Getter
 public final class JewelsSell extends AbyssPlugin {
@@ -37,6 +38,8 @@ public final class JewelsSell extends AbyssPlugin {
 
         new SellCommand(this).register();
         new SellwandCommand(this).register();
+
+        new InteractListener(this);
     }
 
     @Override

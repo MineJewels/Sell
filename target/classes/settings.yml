@@ -1,4 +1,5 @@
 economy-provider: "VAULT"
+infinite-symbol: "Infinite"
 sellwand:
   enchanted: true
   material: "BLAZE_ROD"

@@ -84,5 +84,12 @@
             <scope>system</scope>
             <systemPath>${basedir}/libs/AbyssLib.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>org.minejewels</groupId>
+            <artifactId>realms</artifactId>
+            <version>1.0.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/JewelsRealms.jar</systemPath>
+        </dependency>
     </dependencies>
 </project>

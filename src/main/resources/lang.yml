@@ -34,11 +34,31 @@ messages:
       value: "FIZZ"
       volume: 1
       pitch: 1
+  "sellwand-broken":
+    message:
+      enabled: true
+      value:
+        - "&c&l[!] &cYour sellwand has &nbroken&c!"
+    sound:
+      enabled: true
+      value: "FIZZ"
+      volume: 1
+      pitch: 1
   "sold-contents":
     message:
       enabled: true
       value:
         - "&a&l[!] &aYou have sold everything for &n$%value%&a!"
+    sound:
+      enabled: false
+      value: "FIZZ"
+      volume: 1
+      pitch: 1
+  "sold-contents-sellwand":
+    message:
+      enabled: true
+      value:
+        - "&a&l[!] &aYou have sold everything for &n$%value%&a! &8(&7%multiplier%x multiplier!&8)"
     sound:
       enabled: false
       value: "FIZZ"

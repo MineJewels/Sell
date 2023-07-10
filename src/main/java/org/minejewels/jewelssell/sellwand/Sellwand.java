@@ -32,8 +32,23 @@ public class Sellwand {
         this.plugin.getMessageCache().sendMessage(player, "messages.sellwand-given", replacer);
     }
 
+    public void setWand(final Player player) {
+
+        final PlaceholderReplacer replacer = new PlaceholderReplacer()
+                .addPlaceholder("%multiplier%", Utils.format(this.multiplier))
+                .addPlaceholder("%uses%", this.formatUses());
+
+        ItemStack item = this.plugin.getSettingsConfig().getItemBuilder("sellwand")
+                .parse(replacer);
+
+        item = NBTUtils.get().setLong(item, "SELLWAND-USES", this.uses);
+        item = NBTUtils.get().setDouble(item, "SELLWAND-MULTIPLIER", this.multiplier);
+
+        player.getInventory().setItemInHand(item);
+    }
+
     private String formatUses() {
-        if (this.uses == -1) return "Infinite";
+        if (this.uses == -1) return this.plugin.getSettingsConfig().getString("infinite-symbol");
         return Utils.format(this.uses);
     }
 }
