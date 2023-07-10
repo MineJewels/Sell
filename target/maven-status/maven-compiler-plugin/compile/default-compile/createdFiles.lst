@@ -1,0 +1,7 @@
+org\minejewels\jewelssell\commands\sellwand\sub\SellwandGiveCommand.class
+org\minejewels\jewelssell\item\registry\ItemRegistry.class
+org\minejewels\jewelssell\commands\sell\SellCommand.class
+org\minejewels\jewelssell\item\SellableItem.class
+org\minejewels\jewelssell\JewelsSell.class
+org\minejewels\jewelssell\sellwand\Sellwand.class
+org\minejewels\jewelssell\commands\sellwand\SellwandCommand.class

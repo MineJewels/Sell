@@ -1,0 +1,14 @@
+economy-provider: "VAULT"
+sellwand:
+  enchanted: true
+  material: "BLAZE_ROD"
+  name: "#e8b84f&lS#e0ae4c&le#d9a348&ll#d19945&ll #ca8e41&lW#c2843e&la#bb793a&ln#b36f37&ld &8(&7Right-Click Chest&8)"
+  lore:
+    - "&8Legendary Item"
+    - "&7Sell all of your generator materials at &fease &7with a simple"
+    - "&7click of A chest!"
+    - "&7"
+    - "#e8b84f&lI#e3b14d&ln#dda94a&lf#d8a248&lo#d39b45&lr#ce9443&lm#c88c41&la#c3853e&lt#be7e3c&li#b87639&lo#b36f37&ln"
+    - " #E8B84F&l︳ &7Multiplier: &f%multiplier%x"
+    - " #E8B84F&l︳ &7Uses: &f%uses% Uses"
+    - "&7"

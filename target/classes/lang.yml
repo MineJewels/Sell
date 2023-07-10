@@ -1,0 +1,66 @@
+messages:
+  "player-doesnt-exist":
+    message:
+      enabled: true
+      value:
+        - "&8[&c&lAlert&8] &cThis player does not exist! If you think this is a error, send this message to a staff."
+  "invalid-number":
+    message:
+      enabled: true
+      value:
+        - "&8[&c&lAlert&8] &cYou have entered an invalid number!"
+    sound:
+      enabled: true
+      value: "FIZZ"
+      volume: 1
+      pitch: 1
+  "no-permission":
+    message:
+      enabled: true
+      value:
+        - "&c&l[!] &cYou do not have &npermission&c to execute this!"
+    sound:
+      enabled: true
+      value: "FIZZ"
+      volume: 1
+      pitch: 1
+  "no-sellable-items":
+    message:
+      enabled: true
+      value:
+        - "&c&l[!] &cYou do not have any &nsellable&c items!"
+    sound:
+      enabled: true
+      value: "FIZZ"
+      volume: 1
+      pitch: 1
+  "sold-contents":
+    message:
+      enabled: true
+      value:
+        - "&a&l[!] &aYou have sold everything for &n$%value%&a!"
+    sound:
+      enabled: false
+      value: "FIZZ"
+      volume: 1
+      pitch: 1
+  "sellwand-help":
+    message:
+      enabled: true
+      value:
+        - "&a&l[!] &aYou have sold everything for &n$%value%&a!"
+    sound:
+      enabled: false
+      value: "FIZZ"
+      volume: 1
+      pitch: 1
+  "sellwand-given":
+    message:
+      enabled: true
+      value:
+        - "&a&l[!] &aYou have been given a &n%multiplier%x&a sellwand with &n%uses%&a uses!"
+    sound:
+      enabled: false
+      value: "FIZZ"
+      volume: 1
+      pitch: 1

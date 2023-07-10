@@ -1,0 +1,7 @@
+name: JewelsSell
+version: '${project.version}'
+main: org.minejewels.jewelssell.JewelsSell
+api-version: '1.19'
+depend: [AbyssLib, Vault]
+authors: [Consciences]
+description: Custom sell plugin!
