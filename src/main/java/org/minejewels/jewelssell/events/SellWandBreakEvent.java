@@ -1,10 +1,12 @@
 package org.minejewels.jewelssell.events;
 
+import lombok.Getter;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
+@Getter
 public class SellWandBreakEvent extends Event {
 
     private final static HandlerList HANDLER_LIST = new HandlerList();
