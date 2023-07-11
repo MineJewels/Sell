@@ -8,6 +8,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.minejewels.jewelssell.JewelsSell;
 
+import java.util.UUID;
+
 @Data
 public class Sellwand {
 
@@ -24,6 +26,7 @@ public class Sellwand {
         ItemStack item = this.plugin.getSettingsConfig().getItemBuilder("sellwand")
                 .parse(replacer);
 
+        item = NBTUtils.get().setString(item, "SELLWAND-UUID", UUID.randomUUID().toString());
         item = NBTUtils.get().setLong(item, "SELLWAND-USES", this.uses);
         item = NBTUtils.get().setDouble(item, "SELLWAND-MULTIPLIER", this.multiplier);
 
@@ -41,6 +44,7 @@ public class Sellwand {
         ItemStack item = this.plugin.getSettingsConfig().getItemBuilder("sellwand")
                 .parse(replacer);
 
+        item = NBTUtils.get().setString(item, "SELLWAND-UUID", UUID.randomUUID().toString());
         item = NBTUtils.get().setLong(item, "SELLWAND-USES", this.uses);
         item = NBTUtils.get().setDouble(item, "SELLWAND-MULTIPLIER", this.multiplier);
 
