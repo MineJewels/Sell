@@ -5,6 +5,7 @@ import net.abyssdev.abysslib.listener.AbyssListener;
 import net.abyssdev.abysslib.nbt.NBTUtils;
 import net.abyssdev.abysslib.placeholder.PlaceholderReplacer;
 import net.abyssdev.abysslib.utils.Utils;
+import net.abyssdev.me.lucko.helper.Events;
 import org.bukkit.Material;
 import org.bukkit.block.Chest;
 import org.bukkit.entity.Player;
@@ -13,6 +14,9 @@ import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.minejewels.jewelsrealms.events.RealmInteractEvent;
 import org.minejewels.jewelssell.JewelsSell;
+import org.minejewels.jewelssell.events.PlayerSellEvent;
+import org.minejewels.jewelssell.events.SellWandBreakEvent;
+import org.minejewels.jewelssell.events.SellWandSellEvent;
 import org.minejewels.jewelssell.sellwand.Sellwand;
 
 public class InteractListener extends AbyssListener<JewelsSell> {
@@ -77,9 +81,17 @@ public class InteractListener extends AbyssListener<JewelsSell> {
 
         plugin.getMessageCache().sendMessage(player, "messages.sold-contents-sellwand", replacer);
 
+        final SellWandSellEvent sellEvent = new SellWandSellEvent(player, worth.get());
+
+        Events.call(sellEvent);
+
         if (uses - 1 == 0) {
             Utils.removeItemsFromHand(player, 1, false);
             this.plugin.getMessageCache().sendMessage(player, "messages.sellwand-broken");
+
+            final SellWandBreakEvent breakEvent = new SellWandBreakEvent(player);
+
+            Events.call(breakEvent);
         }
     }
 }

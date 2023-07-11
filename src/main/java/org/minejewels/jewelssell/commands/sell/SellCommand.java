@@ -6,11 +6,13 @@ import net.abyssdev.abysslib.command.context.CommandContext;
 import net.abyssdev.abysslib.nbt.NBTUtils;
 import net.abyssdev.abysslib.placeholder.PlaceholderReplacer;
 import net.abyssdev.abysslib.utils.Utils;
+import net.abyssdev.me.lucko.helper.Events;
 import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.eclipse.collections.api.factory.Lists;
 import org.minejewels.jewelssell.JewelsSell;
+import org.minejewels.jewelssell.events.PlayerSellEvent;
 
 public class SellCommand extends AbyssCommand<JewelsSell, Player> {
 
@@ -52,5 +54,9 @@ public class SellCommand extends AbyssCommand<JewelsSell, Player> {
         this.plugin.getEconomy().addBalance(player, totalValue);
 
         plugin.getMessageCache().sendMessage(player, "messages.sold-contents", replacer);
+
+        final PlayerSellEvent sellEvent = new PlayerSellEvent(player, totalValue);
+
+        Events.call(sellEvent);
     }
 }
